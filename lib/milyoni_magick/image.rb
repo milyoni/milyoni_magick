@@ -92,8 +92,7 @@ module MilyoniMagick
           :resize => size
         }.to_argv
         command = "#{tempfile.path} #{options} #{tempfile.path}"
-      #  convert(command)
-      #end
+        convert(command)
     end
 
     # TODO: extract defaults

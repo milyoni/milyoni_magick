@@ -28,3 +28,13 @@ image.composite!(image3, {
 })
 
 image.write_and_open("output_file.png")
+
+## resize the image
+#def resize_card_image(source_file_path, output_file_path, dimensions)
+#  options = {
+#    :resize => dimensions
+#  }.to_argv
+#  command = "#{source_file_path} #{options} #{output_file_path}"
+#  convert(command)
+#end
+#resize_card_image(card_image, card_image_sized, image_resize_dimensions)

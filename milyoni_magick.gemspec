@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/milyoni_magick/version', __FILE__)
 
+
 Gem::Specification.new do |gem|
   gem.name          = "milyoni_magick"
   gem.version       = MilyoniMagick::VERSION
