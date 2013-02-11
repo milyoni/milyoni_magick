@@ -7,6 +7,8 @@ install_gem () {
   gem install $1 --no-rdoc --no-ri
 }
 
-install_gem "$(echo `build_gem` | awk '{print $9}')"
+GEM_FILE="$(echo `build_gem` | awk '{print $9}')"
+install_gem $GEM_FILE
+rm $GEM_FILE
 
 
