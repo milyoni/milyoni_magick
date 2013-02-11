@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Ryan Venegas", "Roger Graves"]
   gem.email         = %q{"devs@milyoni.com"}
   gem.description   = %q{wrapper for imagemagick}
+  gem.summary       = %q{wrapper for imagemagick}
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
