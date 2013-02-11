@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    milyoni_magick (0.0.1.alpha2)
+    milyoni_magick (0.0.1.alpha3)
 
 GEM
   remote: https://rubygems.org/

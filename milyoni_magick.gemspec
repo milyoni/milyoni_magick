@@ -6,8 +6,9 @@ Gem::Specification.new do |gem|
   gem.name          = "milyoni_magick"
   gem.version       = MilyoniMagick::VERSION
   gem.authors       = ["Ryan Venegas", "Roger Graves"]
+  gem.homepage      = "http://www.milyoni.com"
   gem.email         = %q{"devs@milyoni.com"}
-  gem.description   = %q{wrapper for imagemagick}
+  gem.description   = %q{wrapper for imagemagick processing}
   gem.summary       = %q{wrapper for imagemagick}
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
