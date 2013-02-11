@@ -87,6 +87,15 @@ module MilyoniMagick
       composite(command)
     end
 
+    def resize!(size)
+        options = {
+          :resize => size
+        }.to_argv
+        command = "#{tempfile.path} #{options} #{tempfile.path}"
+      #  convert(command)
+      #end
+    end
+
     # TODO: extract defaults
     def font_family
       "./fonts/Helvetica.dfont"
