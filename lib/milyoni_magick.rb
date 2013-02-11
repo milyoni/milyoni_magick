@@ -1,7 +1,6 @@
-#require "milyoni_magick/utils"
 require "tempfile"
-require "./lib/milyoni_magick/utils"
-require "./lib/milyoni_magick/image"
+require "milyoni_magick/utils"
+require "milyoni_magick/image"
 
 module MilyoniMagick
   def convert(cmd)
