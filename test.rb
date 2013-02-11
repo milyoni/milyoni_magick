@@ -1,8 +1,6 @@
-class Hash
-  def to_argv
-    self.map { |k, v| "-#{k} #{v}" }.join(" ")
-  end
-end
+require "./lib/milyoni_magick"
+
+include MilyoniMagick
 
 # Defaults
 template    = "./images/template-quote.png"
@@ -33,14 +31,6 @@ def header_font_options
   base_font_options.merge({
     :pointsize => 18
   })
-end
-
-def convert(cmd)
-  `convert #{cmd}`
-end
-
-def composite(cmd)
-  `composite #{cmd}`
 end
 
 # Add the header text
