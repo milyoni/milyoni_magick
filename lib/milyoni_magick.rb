@@ -1,4 +1,5 @@
-require "milyoni_magick/utils"
+#require "milyoni_magick/utils"
+require "./lib/milyoni_magick/utils"
 
 module MilyoniMagick
   def convert(cmd)
