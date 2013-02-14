@@ -34,7 +34,7 @@ module MilyoniMagick
 
       options = header_font_options.merge({
         :gravity => "North",
-        :annotate => "#{geometry} \"#{text.gsub(/[\"]/, '\"')}\"" # this argument must come last in the list of arguments
+        :annotate => "#{geometry} \"#{(text || "").gsub(/[\"]/, '\"')}\"" # this argument must come last in the list of arguments
       }).to_argv
       command = "#{tempfile.path} #{options} #{tempfile.path}"
       #puts command
@@ -72,7 +72,7 @@ module MilyoniMagick
         :pointsize => pointsize
       }).to_argv
 
-      command = "#{options} caption:\"#{text.gsub(/[\"]/, '\"')}\" #{caption_img.path}"
+      command = "#{options} caption:\"#{(text || "").gsub(/[\"]/, '\"')}\" #{caption_img.path}"
       convert(command)
 
       # composite caption text image onto self

@@ -1,3 +1,3 @@
 module MilyoniMagick
-  VERSION = "0.0.1.alpha6"
+  VERSION = "0.0.1.alpha7"
 end
