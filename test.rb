@@ -4,9 +4,9 @@ include MilyoniMagick
 
 # Defaults
 body_text_length = 140
-body_text   = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"[0..body_text_length]
+body_text   = 'Lorem ipsum "dolor sit don\'t test'[0..body_text_length]
 header_text_length = 18
-header_text = "Life of PI Foo Bar"[0..header_text_length]
+header_text = "Life of '\"PI Foo Bar"[0..header_text_length]
 
 image = MilyoniMagick::Image.read("./images/template-quote.png")
 image.annotate(header_text, {
