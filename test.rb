@@ -6,7 +6,7 @@ include MilyoniMagick
 body_text_length = 140
 body_text   = 'Lorem ipsum "dolor sit don\'t test'[0..body_text_length]
 header_text_length = 18
-header_text = "Life of '\"PI Foo Bar"[0..header_text_length]
+header_text = "Life of '\"PI Foo4 Bar"[0..header_text_length]
 
 image = MilyoniMagick::Image.read("./images/template-quote.png")
 image.annotate(header_text, {
@@ -27,7 +27,11 @@ image.composite!(image3, {
   top: 52
 })
 
-image.write_and_open("output_file.png")
+`open #{image.path}`
+#`mv #{image.path} outfile.png`
+#puts "#{__FILE__}:#{__LINE__}", image.path
+
+#`open outfile.png`
 
 ## resize the image
 #def resize_card_image(source_file_path, output_file_path, dimensions)
