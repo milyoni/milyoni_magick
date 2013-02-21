@@ -8,15 +8,6 @@ module MilyoniMagick
       new(source)
     end
 
-    def write(output)
-      `mv #{tempfile.path} #{output}`
-    end
-
-    def write_and_open(output)
-      write(output)
-      `open #{output}`
-    end
-
     def initialize(file_path_or_image)
       if file_path_or_image.is_a?(MilyoniMagick::Image)
         @source_file_path = file_path_or_image.path
@@ -123,7 +114,7 @@ module MilyoniMagick
 
     private
     def new_temp_file(file_path = nil)
-      tmp = Tempfile.new(['tmp', '.png'])
+      tmp = File.new("/tmp/milyoni_magick_#{rand.to_s + Time.now.to_i.to_s}.png", "w")
       tmp << File.read(file_path) if file_path
       tmp.close
       tmp
